@@ -22,6 +22,6 @@ public class Foo
 }
 ````
 
-If your code will contain many keys, consider using the HashedKeyedLock with a hash function to minimize the nubmer of 
+If your code will contain many keys, consider using the [HashedKeyedLock](/KeyedLock/HashedKeyedLock.cs) with a hash function to minimize the nubmer of 
 [SemaphoreSlim](https://docs.microsoft.com/en-us/dotnet/api/system.threading.semaphoreslim?view=netstandard-2.0)
 objects that will be held in memory.
