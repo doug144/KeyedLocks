@@ -5,7 +5,7 @@ locks by a given key of any type. For example:
 ````csharp
 public class Foo
 {
-    private _locker = new KeyedLock<string>();
+    private KeyedLock<string> _locker = new KeyedLock<string>();
   
     public void DoSomethingWithLock(string keyToLock)
     {
