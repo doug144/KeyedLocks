@@ -48,4 +48,4 @@ public class Foo
 }
 ````
 ## Resources
-Some of the ideas for this repo were taken from [this blog post](https://www.tabsoverspaces.com/233704-named-locks-using-monitor-in-net-performance).
+Some of the ideas for this repo were taken from [this blog post](https://www.tabsoverspaces.com/233703-named-locks-using-monitor-in-net-implementation).
