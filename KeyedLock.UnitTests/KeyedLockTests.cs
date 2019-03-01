@@ -10,7 +10,7 @@ namespace KeyedLock.UnitTests
         public void GetLockByString_SameKey_SameLock()
         {
             //arrange
-            var locker = new KeyedLock<string>();
+            var locker = new KeyedLocker<string>();
 
             //act
             var sem = locker["test"];
@@ -24,7 +24,7 @@ namespace KeyedLock.UnitTests
         public void GetLockByString_DifferentKey_DifferentLock()
         {
             //arrange
-            var locker = new KeyedLock<string>();
+            var locker = new KeyedLocker<string>();
 
             //act
             var sem = locker["test"];

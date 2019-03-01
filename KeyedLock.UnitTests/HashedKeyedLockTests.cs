@@ -8,13 +8,13 @@ namespace KeyedLock.UnitTests
     public class HashedKeyedLockTests
     {
         private Dictionary<string, int> _dict;
-        private HashedKeyedLock<string, int> _locker;
+        private HashedKeyedLocker<string, int> _locker;
 
         [TestInitialize]
         public void TestInitialize()
         {
             _dict = new Dictionary<string, int>();
-            _locker = new HashedKeyedLock<string, int>(x => _dict.GetValueOrDefault(x));
+            _locker = new HashedKeyedLocker<string, int>(x => _dict.GetValueOrDefault(x));
         }
 
         [TestMethod]
