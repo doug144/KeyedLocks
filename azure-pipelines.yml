@@ -39,3 +39,6 @@ steps:
     #majorVersion: '1' # Required when versioningScheme == byPrereleaseNumber
     #minorVersion: '0' # Required when versioningScheme == byPrereleaseNumber
     #patchVersion: '0' # Required when versioningScheme == byPrereleaseNumber
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifacts'

@@ -5,8 +5,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsPackable>true</IsPackable>
+    <PackageProjectUrl>ttps://github.com/doug144/KeyedLocks</PackageProjectUrl>
     <RepositoryUrl>https://github.com/doug144/KeyedLocks</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <Authors>Douglas Gross</Authors>
   </PropertyGroup>
 
   <ItemGroup>
