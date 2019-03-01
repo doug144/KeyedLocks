@@ -7,7 +7,7 @@ locks by a given key of any type.
 ````csharp
 public class Foo
 {
-    private KeyedLocker<string> _locker = new KeyedLock<string>();
+    private KeyedLocker<string> _locker = new KeyedLocker<string>();
   
     public void DoSomethingWithLock(string keyToLock)
     {
@@ -31,7 +31,7 @@ objects that will be held in memory.
 ````csharp
 public class Foo
 {
-    private HashedKeyedLock<long, int> _locker = new HashedKeyedLock<long, int>(long x => (int)(x % 10)); // limit to 10 locks in memory
+    private HashedKeyedLock<long, int> _locker = new HashedKeyedLocker<long, int>(long x => (int)(x % 10)); // limit to 10 locks in memory
   
     public void DoSomethingWithLock(long keyToLock)
     {
