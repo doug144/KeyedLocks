@@ -12,10 +12,12 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
+# Build
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
+# Run Tests
 - task: DotNetCoreCLI@2
   inputs:
     command: test
@@ -28,3 +30,14 @@ steps:
     configuration: $(buildConfiguration)
     packagesToPack: '**/KeyedLock.csproj'
     
+# Pack NuGet packages.
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+    configuration: $(buildConfiguration)
+    packagesToPack: '**/KeyedLock.csproj'
+    #versioningScheme: 'off' # Options: off, byPrereleaseNumber, byEnvVar, byBuildNumber
+    #versionEnvVar: # Required when versioningScheme == byEnvVar
+    #majorVersion: '1' # Required when versioningScheme == byPrereleaseNumber
+    #minorVersion: '0' # Required when versioningScheme == byPrereleaseNumber
+    #patchVersion: '0' # Required when versioningScheme == byPrereleaseNumber
