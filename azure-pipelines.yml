@@ -27,16 +27,9 @@ steps:
     command: test
     projects: '**/*Test*.csproj'
     arguments: '--configuration $(buildConfiguration)'
-
-- task: NuGetCommand@2
-  displayName: 'Package NuGets'
-  inputs:
-    command: pack
-    configuration: $(buildConfiguration)
-    packagesToPack: '**/KeyedLock.csproj'
     
 - task: DotNetCoreCLI@2
-  displayName: 'Pack NuGet packages'
+  displayName: 'Package NuGets'
   inputs:
     command: 'pack'
     configuration: $(buildConfiguration)
