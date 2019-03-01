@@ -2,6 +2,8 @@
 Allows using [SemaphoreSlim](https://docs.microsoft.com/en-us/dotnet/api/system.threading.semaphoreslim?view=netstandard-2.0)
 locks by a given key of any type.
 
+[![Build Status](https://dev.azure.com/douglasgross/KeyedLock/_apis/build/status/doug144.KeyedLocks?branchName=master)](https://dev.azure.com/douglasgross/KeyedLock/_build/latest?definitionId=1&branchName=master)
+
 ## Usage
 
 ````csharp
