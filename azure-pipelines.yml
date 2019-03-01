@@ -12,26 +12,31 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
-# Build
 steps:
+- task: NuGetToolInstaller@0
+  displayName: 'Install NuGet.exe'
+  inputs:
+    versionSpec: '4.3.0'
+    
 - script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+  displayName: 'Build'
 
-# Run Tests
 - task: DotNetCoreCLI@2
+  displayName: 'Tests'
   inputs:
     command: test
     projects: '**/*Test*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: NuGetCommand@2
+  displayName: 'Package NuGets'
   inputs:
     command: pack
     configuration: $(buildConfiguration)
     packagesToPack: '**/KeyedLock.csproj'
     
-# Pack NuGet packages.
 - task: DotNetCoreCLI@2
+  displayName: 'Pack NuGet packages'
   inputs:
     command: 'pack'
     configuration: $(buildConfiguration)
