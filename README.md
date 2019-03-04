@@ -6,6 +6,10 @@ locks by a given key of any type.
 
 ## Usage
 
+You can use the [KeyedLock NuGet](https://www.nuget.org/packages/KeyedLock/) as shown below.
+
+[![NuGet](https://img.shields.io/nuget/v/KeyedLock.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/KeyedLock/) 
+
 ````csharp
 public class Foo
 {

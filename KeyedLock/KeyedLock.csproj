@@ -6,6 +6,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsPackable>true</IsPackable>
     <PackageProjectUrl>https://github.com/doug144/KeyedLocks</PackageProjectUrl>
+    <PackageIconUrl>https://cdn.pixabay.com/photo/2017/06/22/10/04/lock-2430207_960_720.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/doug144/KeyedLocks</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Authors>Douglas Gross</Authors>
